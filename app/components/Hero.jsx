@@ -29,7 +29,7 @@ export default function Hero() {
                         <motion.div initial={{ opacity: 0, y: -40 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.7, ease: "easeOut" }} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                            <Link href="/products" className="bg-violet-600 text-white px-6 py-3 rounded-full text-lg hover:bg-amber-300 hover:text-zinc-900 transition">Shop Now</Link>
+                            <Link href="/category/men's clothing" className="bg-violet-600 text-white px-6 py-3 rounded-full text-lg hover:bg-amber-300 hover:text-white transition">Shop Now</Link>
 
                         </motion.div>
                     </div>
