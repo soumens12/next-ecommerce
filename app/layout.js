@@ -5,6 +5,7 @@ import { ThemeProvider } from "./components/theme-provider";
 import { CartProvider } from "./context/CartContext";
 import "./globals.css";
 import { Inter } from "next/font/google";
+import { Toaster } from "@/components/ui/sonner"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,6 +17,7 @@ export default function RootLayout({ children }) {
           <CartProvider>
             <Layout>
               {children}
+              <Toaster richColors position="top-right" />
             </Layout>
           </CartProvider>
         </ThemeProvider>

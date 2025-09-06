@@ -3,11 +3,26 @@ import { ShoppingCart } from 'lucide-react'
 import Image from 'next/image'
 import React, { useContext } from 'react'
 import { useCart } from '../context/CartContext'
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
 
 export default function ProductCard({ item, bgColor, showButton = false }) {
     const { addToCart } = useCart();
+
+    const { ref, inView } = useInView({
+        triggerOnce: true, // animate only once
+        threshold: 0.1,    // trigger when 10% visible
+    });
+
     return (
-        <div className="flex flex-col h-full p-4 rounded  pt-10 relative">
+        <motion.div ref={ref} initial={{ opacity: 0, scale: 0.5 }}
+            animate={inView ? { opacity: 1, scale: 1 } : {}}
+            transition={{
+                duration: 0.8,
+                delay: 0.5,
+                ease: [0, 0.71, 0.2, 1.01],
+            }} className="flex flex-col h-full p-4 rounded  pt-10 relative">
             {/* Image section with background */}
             <div className={`p-4 min-h-[220px] rounded-t-lg ${bgColor} relative`}>
                 <Image
@@ -36,6 +51,6 @@ export default function ProductCard({ item, bgColor, showButton = false }) {
                     </button>
                 )}
             </div>
-        </div>
+        </motion.div>
     )
 }

@@ -1,5 +1,5 @@
 "use client";
-
+import { toast } from "sonner"
 import { createContext, useContext, useEffect, useState } from "react";
 
 export const CartContext = createContext();
@@ -39,6 +39,8 @@ export function CartProvider({ children }) {
 
 
         });
+
+        toast.success(`${product.title} added to cart!`);
     }
 
     const cartCount = carts.reduce((total, item) => total + (item.quantity || 0), 0);
