@@ -16,7 +16,7 @@ export default function Collection() {
                             <Link href="/category/women's clothing">
                                 <button className='bg-violet-600 w-auto self-start text-white px-6 py-2 rounded-full text-lg hover:bg-amber-300 hover:text-white transition'>Shop Now</button>
                             </Link>
-                            <Image src="/collection/winter-collection.png" width={300} height={300} className="h-auto h-30 w-40 sm:w-60 lg:w-70 rounded-lg absolute right-3 bottom-0 md:-bottom-20" alt='Winter Collection' />
+                            <Image src="/collection/winter-collection.png" width={300} height={300} className="h-auto h-30 w-40 sm:w-60 lg:w-70 rounded-lg absolute -right-5 md:right-3 bottom-0 md:-bottom-20" alt='Winter Collection' />
                         </div>
 
                         <div className='flex w-full gap-4 items-center mt-4'>
@@ -38,7 +38,7 @@ export default function Collection() {
                             <h3 className="text-3xl uppercase font-semibold mb-3">Up to 50% Off</h3>
                             <Link href="/category/jewelery">
                                 <button className='bg-violet-600 w-auto self-start text-white px-6 py-2 rounded-full text-lg hover:bg-amber-300 hover:text-white transition'>Shop Now</button></Link>
-                            <Image src="/collection/summer-collection.png" width={400} height={500} className="h-auto w-40 sm:w-60 lg:w-70 rounded-lg absolute right-3 bottom-0 md:bottom-0" alt='Summer Collection' />
+                            <Image src="/collection/summer-collection.png" width={400} height={500} className="h-auto w-40 sm:w-60 lg:w-70 rounded-lg absolute -right-5 md:right-3 bottom-0 md:bottom-0" alt='Summer Collection' />
                         </div>
                     </div>
                 </div>
