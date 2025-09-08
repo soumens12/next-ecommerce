@@ -39,14 +39,14 @@ export default function CartPage() {
                                         <p>Your cart is empty.</p>
                                     </div> : (
                                         carts.map((item) => (
-                                            <div key={item.id} className="flex gap-4 bg-white px-4 py-6 rounded-md shadow-sm border border-gray-200">
+                                            <div key={item.id} className="flex gap-4 bg-white dark:bg-slate-900 px-4 py-6 rounded-md shadow-sm border border-gray-200">
                                                 <div className="flex gap-6 sm:gap-4 max-sm:flex-col">
                                                     <div className="w-24 h-24 max-sm:w-24 max-sm:h-24 shrink-0">
                                                         <Image src={item.image} alt={item.title} width={100} height={100} className="w-full h-full object-contain" />
                                                     </div>
                                                     <div className="flex flex-col gap-4">
                                                         <div>
-                                                            <h3 className="text-sm sm:text-base font-semibold text-slate-900">{item.title}</h3>
+                                                            <h3 className="text-sm sm:text-base font-semibold text-slate-900 dark:text-white">{item.title}</h3>
                                                             <p className="text-[13px] font-medium text-slate-500 mt-2 flex items-center gap-2">Category: <span className="inline-block bg-violet-200 text-slate-900 px-4 capitalize py-1 rounded-xl">{item.category}</span></p>
                                                         </div>
                                                         <div className="mt-auto">
